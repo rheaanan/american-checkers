@@ -1,0 +1,5 @@
+J b2 d4
+J d4 b6
+J b6 d8
+J d8 f6
+J f6 d4
