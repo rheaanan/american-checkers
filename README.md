@@ -19,9 +19,10 @@
     <li><a href="#overview"> ➤ Overview</a></li>
     <li><a href="#project-files-description"> ➤ Project Files Description</a></li>
     <li><a href="#getting-started"> ➤ Getting Started</a></li>
+    <!--
     <li><a href="#scenario1"> ➤ Scenario 1: Using input output files</a></li>
     <li><a href="#scenario2"> ➤ Scenario 2: Watching the game play</a></li>
-    <li><a href="#references"> ➤ References</a></li>
+    -->
     <li><a href="#credits"> ➤ Credits</a></li>
   </ol>
 </details>
@@ -64,7 +65,7 @@ J d6 f8</code></pre>
 
 <ul>
   <li><b>checkers_agent.py</b> - Reads the input.txt file and writes the best move in output.txt</li>
-  <li><b>orchestration.py</b> -  Competes two programs checker_agent_smart.py against checkers_agent_dumb.py alerternatively calling the two programs and making them write and read from their respective input and output files</li>
+  <li><b>orchestration.py</b> -  Competes two programs checker_agent_smart.py against checkers_agent_dumb.py alerternatively calling the two programs and making them write and read from their respective input and output files. This visualization can be used to change parameters like minimax depth level, reward calculation arithmetic etc. </li>
   algorithms.</li>
 </ul>
 
@@ -74,17 +75,12 @@ J d6 f8</code></pre>
   <li><b>input.txt</b> - Example input file</li>
   <li><b>output.txt</b> - Example output file</li>
   <li><b>board_move1.png</b> - Parses autograder test and solution files.</li>
-  <li><b>input_basic.txt</b> - Full board input configuration</li>
+  <li><b>input_basic.txt</b> - Full board input configuration, can be used to reset smart and dumb agents input.txt</li>
   <li><b>input_smart.txt</b> - Input file read by the smart agent</li>
   <li><b>input_dumb.txt</b> - Input file read by the dumb agent</li>
-  
-  
   <li><b>output_smart.txt</b> - Output file the smart agent writes into</li>
   <li><b>output_dumb.txt</b> - Output file the dumb agent writes into</li>
   
-  <li><b>testClasses.py</b> - General autograding test classes.</li>
-  <li><b>test_cases/</b> - Directory containing the test cases for each scenario.</li>
-  <li><b>searchTestClasses.py</b> - Project specific autograding test classes.</li>
 </ul>
 
 ![-----------------------------------------------------](https://raw.githubusercontent.com/andreasbm/readme/master/assets/lines/rainbow.png)
@@ -92,57 +88,21 @@ J d6 f8</code></pre>
 <!-- GETTING STARTED -->
 <h2 id="getting-started"> :book: Getting Started</h2>
 
-<p>You are able to start the game by typing the following commands in the command line:</p>
+<p>To obtain a single move given the <code>input.txt</code> run the following command:</p>
+<pre><code>$ python checkers_agent.py</code></pre>
+<i> The move with most points will be saved in the <code>output.txt </code> Orange dots denotes white coins and Blue dots denote black coins. Light orange and Light blue dots denote King coins in the visualization</i><hr>
+<p>To start the gameplay between the two agents by type the following command in the command line:</p>
 <pre><code>$ python orchestration.py</code></pre>
-
-<p>You can watch the gameplay by opening </p>
-<pre><code>$ python pacman.py -h</code></pre>
-<i>Note that all of the commands that appear in this project also appear in <code>commands.txt</code>, for easy copying and pasting.</i>
-
-![-----------------------------------------------------](https://raw.githubusercontent.com/andreasbm/readme/master/assets/lines/rainbow.png)
-
-<!-- SCENARIO1 -->
-<h2 id="scenario1"> :small_orange_diamond: Scenario 1: Finding a Fixed Food Dot using Depth First Search</h2>
-
-<p>I have implemented the depth-first search (DFS) algorithm in the depthFirstSearch function in <code>search.py</code>.</p>
-<p>The Pacman will quickly find a solution via running the following commands:</p>
-
-<pre><code>$ python pacman.py -l tinyMaze -p SearchAgent</code></pre>
-<pre><code>$ python pacman.py -l mediumMaze -p SearchAgent</code></pre>
-<pre><code>$ python pacman.py -l bigMaze -z .5 -p SearchAgent</code></pre>
-
-<p align="center"> 
-<img src="gif/DFS.gif" alt="Animated gif DFS Algorithm" height="282px" width="637px">
-<!--height="382px" width="737px"-->
-</p>
-
-![-----------------------------------------------------](https://raw.githubusercontent.com/andreasbm/readme/master/assets/lines/rainbow.png)
-
-<!-- SCENARIO2 -->
-<h2 id="scenario2"> :small_orange_diamond: Scenario 2: Finding a Fixed Food Dot using Breadth First Search</h2>
-
-<p>I have implemented the breadth-first search (BFS) algorithm in the breadthFirstSearch function in <code>search.py</code>.</p>
-<p>I wrote a graph search algorithm that avoids expanding any already visited states.</p>
-<p>The Pacman will quickly find a solution via running the following commands:</p>
-
-<pre><code>$ python pacman.py -l mediumMaze -p SearchAgent -a fn=bfs</code></pre>
-<pre><code>$ python pacman.py -l bigMaze -p SearchAgent -a fn=bfs -z .5</code></pre>
-
-<p align="center"> 
-<img src="gif/BFS.gif" alt="Animated gif BFS Algorithm" height="282px" width="637">
-</p>
-
-![-----------------------------------------------------](https://raw.githubusercontent.com/andreasbm/readme/master/assets/lines/rainbow.png)
+<i>Note to view the gameplay you need to open <code>board_move1.png </code> Orange dots denotes white coins and Blue dots denote black coins. Light orange and Light blue dots denote King coins in the visualization</i>
 
 
 <!-- CREDITS -->
 <h2 id="credits"> :scroll: Credits</h2>
 
-Mohammad Amin Shamshiri
+Rhea Anand
 
-[![GitHub Badge](https://img.shields.io/badge/GitHub-100000?style=for-the-badge&logo=github&logoColor=white)](https://github.com/ma-shamshiri)
-[![Twitter Badge](https://img.shields.io/badge/Twitter-1DA1F2?style=for-the-badge&logo=twitter&logoColor=white)](https://twitter.com/ma_shamshiri)
-[![LinkedIn Badge](https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/ma-shamshiri)
+[![GitHub Badge](https://img.shields.io/badge/GitHub-100000?style=for-the-badge&logo=github&logoColor=white)](https://github.com/rheaanan)
+[![Twitter Badge](https://img.shields.io/badge/Twitter-1DA1F2?style=for-the-badge&logo=twitter&logoColor=white)](https://twitter.com/rheaanan)
+[![LinkedIn Badge](https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/rhea-anand186/)
 
-Acknowledgements: Based on UC Berkeley's Pacman AI project, <a href="http://ai.berkeley.edu">http://ai.berkeley.edu</a>
 
