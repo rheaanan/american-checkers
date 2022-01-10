@@ -6,7 +6,7 @@
 <h5 align="center"> Assignment 2 - <a href="https://web-app.usc.edu/soc/syllabus/20213/30079.pdf">University of Southern California</a> (Spring 2021)</h5>
 
 <p align="center"> 
-  <img src="gif/AI-checkers.gif" alt="Animated checkers game" height="282px" width="637">
+  <img src="gif/AI-checkers.gif" alt="Animated checkers game" height="350px" width="637">
 </p>
 
 <!-- TABLE OF CONTENTS -->
