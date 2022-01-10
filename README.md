@@ -67,8 +67,8 @@ J d6 f8</code></pre>
   <li><b>checkers_agent.py</b> - Reads the input.txt file and writes the best move in output.txt</li>
   <li><b>orchestration.py</b> -  Competes two programs checker_agent_smart.py against <code>checkers_agent_dumb.py</code> alerternatively calling the two programs and making them write and read from their respective input and output files. This visualization can be used to change parameters like minimax depth level, reward calculation arithmetic etc. </li>
   algorithms.</li>
-  <li><b>checkers_agent_smart.py</b> - Reads the input_smart.txt file and writes the best move in output_smart.txt plots the output in <code>board_move1.png</code> and modified the <code>input_dumb.txt</code> with the updated move taken</li></li>
-  <li><b>checkers_agent_dumb.py</b> - Reads the input_dumb.txt file and writes the best move in output_dumb.txt plots the output in <code>board_move1.png</code> and modified the input_smart.txt with the updated move taken</li>
+  <li><b>checkers_agent_smart.py</b> - Reads the <code>input_smart.txt</code> file and writes the best move in <code>output_smart.txt</code> plots the output in <code>board_move1.png</code> and modified the <code>input_dumb.txt</code> with the updated move taken</li></li>
+  <li><b>checkers_agent_dumb.py</b> - Reads the <code>input_dumb.txt</code> file and writes the best move in output_dumb.txt plots the output in <code>board_move1.png</code> and modified the <code>input_smart.txt </code>with the updated move taken</li>
 </ul>
 
 <h3>Some other supporting files</h3>
