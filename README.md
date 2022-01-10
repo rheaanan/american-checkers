@@ -32,8 +32,7 @@
 <h2 id="about-the-project"> :pencil: About The Project</h2>
 
 <p align="justify"> 
-  For those of you not familiar with Pacman, it's a game where Pacman (the yellow circle with a mouth in the above figure) moves around in a maze and tries to eat as many food pellets (the small white dots) as possible, while avoiding the ghosts (the other two agents with eyes in the above figure). If Pacman eats all the food in a maze, it wins.
-</p>
+  English draughts (British English) also called American checkers or straight checkers, is a form of the strategy board game checkers. It is played on an 8×8 checkerboard with 12 pieces per side.</p>
 
 ![-----------------------------------------------------](https://raw.githubusercontent.com/andreasbm/readme/master/assets/lines/rainbow.png)
 
@@ -41,8 +40,22 @@
 <h2 id="overview"> :cloud: Overview</h2>
 
 <p align="justify"> 
-  In this project, the Pacman agent will find paths through his maze world, both to reach a particular location and to collect food efficiently. I implemented general search algorithms such as depth-first, breadth-first, uniform cost, and A* search algorithms which are used to solve navigation problems in the Pacman world.
-</p>
+  In this project, the checkers AI agent needs to find the most optimal move to make given an input.txt file of the below format. 'b' and 'w' represent regular black and white coins respectively. 'B' and 'W' represent black and white coins that have become kings coins and can move front and back.
+  <pre><code>GAME
+BLACK
+100.0
+........
+....W...
+.....w..
+....W.w.
+........
+w.w.W.w.
+...B....
+......w.</code></pre>
+The AI agent needs to produce the most viable move output in the following format. If multiple jumps are possible the sequence of jumps needs to be written into the output folder. For the above example input below is one suggested move output which results in most points.
+  <pre><code>J d2 f4
+J f4 d6
+J d6 f8</code></pre>
 
 ![-----------------------------------------------------](https://raw.githubusercontent.com/andreasbm/readme/master/assets/lines/rainbow.png)
 
@@ -50,23 +63,25 @@
 <h2 id="project-files-description"> :floppy_disk: Project Files Description</h2>
 
 <ul>
-  <li><b>search.py</b> - Where all of the search algorithms reside.</li>
-  <li><b>searchAgents.py</b> - Where all of the search-based agents reside.</li>
-  <li><b>pacman.py</b> - The main file that runs Pacman games. This file also describes a Pacman GameState types.</li>
-  <li><b>game.py</b> - The logic behind how the Pacman world works.</li>
-  <li><b>util.py</b> - Useful data structures for implementing search algorithms.</li>
+  <li><b>checkers_agent.py</b> - Reads the input.txt file and writes the best move in output.txt</li>
+  <li><b>orchestration.py</b> -  Competes two programs checker_agent_smart.py against checkers_agent_dumb.py alerternatively calling the two programs and making them write and read from their respective input and output files</li>
+  algorithms.</li>
 </ul>
 
 <h3>Some other supporting files</h3>
 <ul>
-  <li><b>graphicsDisplay.py</b> - Graphics for Pacman.</li>
-  <li><b>graphicsUtils.py</b> - Support for Pacman graphics.</li>
-  <li><b>textDisplay.py</b> - ASCII graphics for Pacman.</li>
-  <li><b>ghostAgents.py</b> - Agents to control ghosts.</li>
-  <li><b>keyboardAgents.py</b> - Keyboard interfaces to control Pacman.</li>
-  <li><b>layout.py</b> - Code for reading layout files and storing their contents.</li>
-  <li><b>autograder.py</b> - Project autograder.</li>
-  <li><b>testParser.py</b> - Parses autograder test and solution files.</li>
+
+  <li><b>input.txt</b> - Example input file</li>
+  <li><b>output.txt</b> - Example output file</li>
+  <li><b>board_move1.png</b> - Parses autograder test and solution files.</li>
+  <li><b>input_basic.txt</b> - Full board input configuration</li>
+  <li><b>input_smart.txt</b> - Input file read by the smart agent</li>
+  <li><b>input_dumb.txt</b> - Input file read by the dumb agent</li>
+  
+  
+  <li><b>output_smart.txt</b> - Output file the smart agent writes into</li>
+  <li><b>output_dumb.txt</b> - Output file the dumb agent writes into</li>
+  
   <li><b>testClasses.py</b> - General autograding test classes.</li>
   <li><b>test_cases/</b> - Directory containing the test cases for each scenario.</li>
   <li><b>searchTestClasses.py</b> - Project specific autograding test classes.</li>

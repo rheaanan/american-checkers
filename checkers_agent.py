@@ -400,7 +400,7 @@ class problem_struct:
 
 def main():
     #starttime = timeit.default_timer()
-    f = open("input_ali.txt", "r")
+    f = open("input.txt", "r")
     #f2 = open("output.txt", "w")
 
     game_type = f.readline().rstrip()
